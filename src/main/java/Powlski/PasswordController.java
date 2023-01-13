@@ -6,8 +6,8 @@ import java.util.Random;
 @RestController
 public class PasswordController {
 
-    @GetMapping("RandomPassword/{length}")
-    public String RandomPassword(@PathVariable int length) {
+    @GetMapping("randomPassword/{length}")
+    public String randomPassword(@PathVariable int length) {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\\$%&/()=?";
         String password = "";
         int value;

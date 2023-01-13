@@ -9,11 +9,12 @@ public class PasswordController {
     public String randomPassword(@PathVariable int length) {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\\$%&/()=?";
         String password = "";
+        Random random = new Random();
         int value;
 
         for (int i = 0; i < length; i++)
         {
-            value = new Random().ints(1,characters.length()).findFirst().getAsInt();
+            value = random.nextInt(characters.length());
             password += characters.charAt(value) ;
         }
         return password;
